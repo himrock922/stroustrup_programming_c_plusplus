@@ -48,7 +48,7 @@ int main() {
 
       if (t.kind == 'q') break; // 'q' for quit
       if (t.kind == ';')        // ';' for "print now"
-        cout << "=" << val << '\n';
+        cout << "=" << val << endl;
       else
         ts.putback(t);
       val = expression();
@@ -111,6 +111,7 @@ double term() {
         break;
       }
       default:
+        ts.putback(t);
         return left;
     }
   }
