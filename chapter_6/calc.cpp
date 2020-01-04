@@ -44,6 +44,7 @@ int main() {
   double val = 0.0;
   try {
     while (cin) {
+      cout << "> ";
       Token t = ts.get();
 
       if (t.kind == 'q') break; // 'q' for quit
